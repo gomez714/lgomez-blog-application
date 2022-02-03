@@ -31,10 +31,13 @@ const episode = data.sanityEpisode;
             title={episode.title}
             description={episode.description}    
         >
-            <GatsbyImage
-                image={episode.image.asset.gatsbyImageData}
-                alt={episode.title}
-            />
+            {episode.image?.asset?.gatsbyImageData && (
+                <GatsbyImage
+                    image={episode.image.asset.gatsbyImageData}
+                    alt={episode.title}
+                />
+            )}
+            
 
             <h1>{episode.title}</h1>
 
