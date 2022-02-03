@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
         siteUrl: 'https://www.mydomain.tld',
-        title: 'Blog application',
-        description: 'An application that allows for blogs to be created and posted',
+        title: 'World of Gomez',
+        description: "Here's the place where you can get a taste if who I am.",
         image: 
     'https://res.cloudinary.com/jlengstorf/image/upload/v1628127675/frontend-masters/gatsby-intro/share-image.jpg'
     },
@@ -47,6 +47,13 @@ module.exports = {
         },
         'gatsby-plugin-image',
         'gatsby-plugin-sharp',
-        'gatsby-transformer-sharp'
+        'gatsby-transformer-sharp',
+        {
+            resolve: 'gatsby-source-sanity',
+            options: {
+                projectId: 'vnkupgyb',
+                dataset: `production`
+            },
+        },
     ]
 }
